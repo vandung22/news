@@ -5,7 +5,7 @@
 // @description  Bypass Yeumoney
 // @author       vandung
 // @match        *://yeumoney.com/*
-// @match        *://docs.google.com/spreadsheets/*
+// @match        *://link4m.com/*
 // @match        *://docs.google.com/forms/*
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue

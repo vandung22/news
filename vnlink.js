@@ -5,6 +5,7 @@
 // @description  Bypass Yeumoney
 // @author       BaoNgocCoder
 // @match        *://yeumoney.com/*
+// @match        *://link4m.com/*
 // @match        *://docs.google.com/spreadsheets/*
 // @match        *://docs.google.com/forms/*
 // @grant        GM_xmlhttpRequest

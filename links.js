@@ -7,6 +7,113 @@
 // @match        *://yeumoney.com/*
 // @match        *://link4m.com/*
 // @match        *://docs.google.com/forms/*
+// @match        *://*.adshnk.com/*
+// @match        *://*.adshrink.it/*
+// @match        *://*.shrink-service.it/*
+// @match        *://adfoc.us/*
+// @match        *://boost.ink/*
+// @match        *://bst.gg/*
+// @match        *://bst.wtf/*
+// @match        *://booo.st/*
+// @match        *://boost.fusedgt.com/*
+// @match        *://thedragonslayer2.github.io/*
+// @match        *://empebau.eu/*
+// @match        *://www.google.com/url*
+// @match        *://is.gd/*
+// @match        *://justpaste.it/redirect/*
+// @match        *://leasurepartment.xyz/*
+// @match        *://letsboost.net/*
+// @match        *://linkvertise.com/*
+// @match        *://loot-link.com/*
+// @match        *://loot-link.co/*
+// @match        *://loot-link.org/*
+// @match        *://loot-link.net/*
+// @match        *://loot-link.info/*
+// @match        *://loot-links.com/*
+// @match        *://loot-links.co/*
+// @match        *://loot-links.org/*
+// @match        *://loot-links.net/*
+// @match        *://loot-links.info/*
+// @match        *://lootlinks.com/*
+// @match        *://lootlinks.co/*
+// @match        *://lootlinks.org/*
+// @match        *://lootlinks.net/*
+// @match        *://lootlinks.info/*
+// @match        *://lootdest.com/*
+// @match        *://lootdest.co/*
+// @match        *://lootdest.org/*
+// @match        *://lootdest.net/*
+// @match        *://lootdest.info/*
+// @match        *://links-loot.com/*
+// @match        *://links-loot.co/*
+// @match        *://links-loot.org/*
+// @match        *://links-loot.net/*
+// @match        *://links-loot.info/*
+// @match        *://linksloot.com/*
+// @match        *://linksloot.co/*
+// @match        *://linksloot.org/*
+// @match        *://linksloot.net/*
+// @match        *://linksloot.info/*
+// @match        *://lootlink.com/*
+// @match        *://lootlink.co/*
+// @match        *://lootlink.org/*
+// @match        *://lootlink.net/*
+// @match        *://lootlink.info/*
+// @match        *://mboost.me/*
+// @match        *://rekonise.com/*
+// @match        *://rkns.link/*
+// @match        *://shorte.st/*
+// @match        *://sh.st/*
+// @match        *://gestyy.com/*
+// @match        *://destyy.com/*
+// @match        *://social-unlock.com/*
+// @match        *://socialwolvez.com/app/l/*
+// @match        *://sub1s.com/*
+// @match        *://sub2get.com/*
+// @match        *://subtolink.com/*
+// @match        *://sub2unlock.com/*
+// @match        *://unlocknow.net/*
+// @match        *://v.gd/*
+// @match        https://bypass.city/*
+// @match        https://adbypass.org/*
+// @match        http://localhost:3000/*
+// @license      CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/).
+// @exclude      *://publisher.linkvertise.com/*
+// @exclude      *://linkvertise.com/adfly-notice*
+// @exclude      *://linkvertise.com/search*
+// @exclude      *://linkvertise.com/login*
+// @exclude      *://linkvertise.com/profile*
+// @exclude      *://blog.linkvertise.com
+// @exclude      *://blog.linkvertise.com/*
+// @exclude      *://linkvertise.com/assets/vendor/*
+// @exclude      *://publisher.linkvertise.com/*
+// @exclude      *://link-mutation.linkvertise.com/*
+// @exclude      *://linkvertise.com/assets/external/thinksuggest
+// @downloadURL  https://api2.adbypass.org/userscript/download/bypass.user.js
+// @updateURL    https://api2.adbypass.org/userscript/download/bypass.meta.js
+
+// @grant        GM_getValue
+// @grant        GM.getValue
+
+// @grant        GM_setValue
+// @grant        GM.setValue
+
+// @grant        GM_deleteValue
+// @grant        GM.deleteValue
+
+// @grant        GM_addStyle
+// @grant        GM.addStyle
+
+// @grant        GM_xmlhttpRequest
+// @grant        GM.xmlHttpRequest
+
+// @grant        GM.info
+// @grant        GM_info
+
+// @grant        GM_getResourceURL
+// @grant        GM.getResourceURL
+
+
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
 // @grant        GM_setValue

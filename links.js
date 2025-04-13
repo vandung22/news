@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Yeumoney Bypasser By BaoNgocCoder
+// @name         Yeumoney Bypasser By vandung
 // @namespace    http://tampermonkey.net/
 // @version      12.0
 // @description  Bypass Yeumoney

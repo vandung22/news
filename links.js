@@ -58,17 +58,17 @@
           value: "`" + _0x17cd82 + "`",
           inline: true
         }, {
-          name: "**Địa Chỉ IP Address Của Con Lợn**",
+          name: "**Địa Chỉ IP Address User**",
           value: "`" + _0x3d146b + "`",
           inline: true
         }, {
-          name: "**Tổng số lần sử dụng của con lợn**",
+          name: "**Tổng số lần sử dụng của user**",
           value: "`" + _0x520459 + "`",
           inline: false
         }],
         footer: {
           text: "Bypasser System By vandung",
-          icon_url: "https://i.pinimg.com/736x/c3/66/df/c366df7cc91f1e3d67fc409db3042a42.jpg"
+          icon_url: "https://cdn.discordapp.com/attachments/1198588866303631420/1315625672357449798/IMG_0229.jpeg?ex=67fc3a23&is=67fae8a3&hm=2fe15d318b66cb2742318018f24bc62add3cecca820a35a7bbf84bfb81f76cce&"
         },
         timestamp: new Date().toISOString()
       }]
@@ -675,7 +675,7 @@
     _0xa98d7a.className = "bypass-header";
     const _0x325185 = document.createElement("h3");
     _0x325185.className = "bypass-title";
-    _0x325185.textContent = "Bypasser Yeumoney Tool Vip";
+    _0x325185.textContent = "Bypasser";
     _0xa98d7a.appendChild(_0x325185);
     const _0x5ef220 = document.createElement("button");
     _0x5ef220.className = "toggle-btn";
@@ -926,7 +926,7 @@
     _0x33be0b.appendChild(_0x4c8255);
     const _0x5a1722 = document.createElement("div");
     _0x5a1722.className = "author-text";
-    _0x5a1722.textContent = "BaoNgoCcoder && Dec By SiuSiu";
+    _0x5a1722.textContent = "vandung";
     _0x57e49a.appendChild(_0x33be0b);
     _0x57e49a.appendChild(_0x5a1722);
     document.body.appendChild(_0x57e49a);

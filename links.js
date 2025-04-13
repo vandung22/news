@@ -958,3 +958,185 @@
     }
   };
 })();
+
+release: 14.0.2 (1182f49), 1/29/2025, 8:49:59 PM
+Discord: https://discord.gg/bypass-city
+additional copyright/license info:
+Linkvertise Bypass by "bypass.city team" is licensed under CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/).
+
+Linkvertise Bypass © 2025 by bypass.city team.
+
+Please Leave this section here if you plan on re-posting this script.
+If you plan on re-posting this script to GreasyFork then go to the admin
+tab and under source syncing put
+this URL to always have the latest version: https://api2.adbypass.org/userscript/download/bypass.user.js
+*/
+
+(() => {
+  // src/polyfills.ts
+  var UserScript = {
+    getValue: (key, defaultValue) => {
+      return typeof GM_getValue == "undefined" ? GM.getValue(key, defaultValue) : new Promise((resolve) => resolve(GM_getValue(key, defaultValue)));
+    },
+    setValue: (key, value) => {
+      return typeof GM_setValue === "undefined" ? GM.setValue(key, value) : new Promise((resolve) => resolve(GM_setValue(key, value)));
+    },
+    deleteValue: (key) => {
+      return typeof GM_deleteValue === "undefined" ? GM.deleteValue(key) : new Promise((resolve) => resolve(GM_deleteValue(key)));
+    },
+    addStyle: (css) => {
+      return typeof GM_addStyle === "undefined" ? GM.addStyle(css) : new Promise((resolve) => resolve(GM_addStyle(css)));
+    },
+    xmlHttpRequest: (details) => {
+      return typeof GM_xmlhttpRequest === "undefined" ? GM.xmlHttpRequest(details) : GM_xmlhttpRequest(details);
+    },
+    getResourceURL: (name, fallbackUrl) => {
+      return typeof GM_getResourceURL !== "undefined" ? new Promise((resolve) => resolve(GM_getResourceURL(name))) : typeof GM.getResourceUrl !== "undefined" ? GM.getResourceUrl(name) : new Promise((resolve) => resolve(fallbackUrl));
+    },
+    info: typeof GM_info === "undefined" ? GM.info : GM_info
+  };
+
+  // src/config.ts
+  var config = {
+    version: UserScript.info.script.version,
+    buildTime: "1/29/2025, 8:49:59 PM",
+    branch: "release",
+    release: "1182f49",
+    installed: true,
+    releaseTag: "14.0.2 (1182f49)",
+    downloadURL: GM_info.script.downloadURL
+  };
+
+  // src/gmWrappedStorage.ts
+  var WrappedGet = async (key) => {
+    const value = await UserScript.getValue(key);
+    return value ? JSON.parse(value) : void 0;
+  };
+  var WrappedSet = async (key, value) => {
+    await UserScript.setValue(key, JSON.stringify(value));
+  };
+
+  // src/utils.ts
+  var sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  // src/bypass-city.ts
+  var bypassCityListener = async () => {
+    if (window.location.hostname !== "bypass.city" && window.location.hostname !== "localhost" && window.location.hostname !== "adbypass.org") {
+      return;
+    }
+    injectScriptInfo();
+    sendUserscriptInfoEvent();
+    window.addEventListener("bypassComplete", async (event) => {
+      const data = event.detail;
+      const redirectURL = await UserScript.getValue("bypass.callback");
+      console.log("bypassMessage", data);
+      await UserScript.deleteValue("bypass.data");
+      await UserScript.deleteValue("bypass.callback");
+      await sleep(1);
+      WrappedSet("bypass.data", data);
+      window.open(redirectURL, "_self", "noopener,noreferrer");
+      await sleep(200);
+      window.open(redirectURL, "_blank");
+    });
+  };
+  var injectScriptInfo = () => {
+    const injectJs = `window.scriptInfo = JSON.parse('${JSON.stringify(config)}')`;
+    const script = document.createElement("script");
+    script.textContent = injectJs;
+    document.body.appendChild(script);
+  };
+  var sendUserscriptInfoEvent = () => {
+    const event = new CustomEvent("userScriptInfo", {
+      detail: config
+    });
+    window.dispatchEvent(event);
+  };
+
+  // src/notify.scss
+  var notify_default = `.notification-tray {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 4000000;
+}
+
+.notification {
+  position: block;
+  margin: 10px;
+  padding: 10px;
+  padding-right: 20px;
+  background-color: #25262b;
+  color: white;
+  transition: opacity 0.6s; /* 600ms to fade out */
+  width: 300px;
+  border-radius: 10px; /* Rounded border */
+  border: 2px solid #3b5bdb;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.notification .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+
+.notification .links {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.notification .links span {
+  padding-bottom: 4px;
+  opacity: 0.7;
+}
+
+.notification .links a, .notification .links span {
+  display: block;
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.grid-item img {
+  margin-top: 15px;
+  margin-right: 5px;
+  width: 32px;
+}
+
+.grid-item h3 {
+  padding-top: 10px;
+  padding-bottom: 3px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.grid-item p {
+  font-style: italic;
+  font-size: 1rem;
+  color: white;
+}
+.grid-item p a {
+  opacity: 1;
+  font-weight: 600;
+  text-decoration: underline !important;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.grid-item h3, .grid-item p {
+  margin: 0;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #3b5bdb;
+  }
+  to {
+    box-shadow: 0 0 20px #3b5bdb;
+  }
+}`;
+
+  // src/notify-element.html
+  var notify_element_default = '<div id="bypass-notification" class="notification">\n    <div class="grid-container">\n      <div class="grid-item">\n        <img height="32" id="bypass-logo" alt="B">\n      </div>\n      <div class="grid-item">\n        <h3 id="title"></h3>\n        <p>\n            <span id="text"></span>\n            <a id="help" href="https://discord.gg/tX8G9G5BMV">Get Support on our Discord</a>\n        </p>\n      </div>\n    </div>\n   \n      <div id="links" class="links">\n       

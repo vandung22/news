@@ -48,7 +48,7 @@
   }
   function _0x56597d(_0x17cd82, _0x3d146b, _0x520459) {
     const _0x4925ad = {
-      username: "Bypasser Notifi By vandung",
+      username: " notifi by vandung",
       avatar_url: "https://i.pinimg.com/736x/77/c9/0a/77c90a2b0c3a7d4a6a1ae22d5ac4238e.jpg",
       embeds: [{
         title: "**User Đã Bypass Thành Công**",

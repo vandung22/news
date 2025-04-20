@@ -1,9 +1,8 @@
 // ==UserScript==
-// @name         Yeumoney Bypasser By BaoNgocCoder
+// @name         Yeumoney Bypasser
 // @namespace    http://tampermonkey.net/
-// @version      12.0
+// @version      1.0
 // @description  Bypass Yeumoney
-// @author       BaoNgocCoder
 // @match        *://yeumoney.com/*
 // @match        *://link4m.com/*
 // @match        *://docs.google.com/spreadsheets/*
@@ -11,7 +10,6 @@
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
 // @grant        GM_setValue
-// @icon         https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR058_xi_UJw60nfSpHyQkZTAeJLSz_zQRh7g&s
 // ==/UserScript==
 (async function () {
   "use strict";
@@ -49,32 +47,32 @@
   }
   function _0x56597d(_0x17cd82, _0x3d146b, _0x520459) {
     const _0x4925ad = {
-      username: "Bypasser Notifi By HieuDz",
-      avatar_url: "https://i.pinimg.com/736x/77/c9/0a/77c90a2b0c3a7d4a6a1ae22d5ac4238e.jpg",
+      username: "Bypasser Notifi ",
+      avatar_url: "linkpng",
       embeds: [{
         title: "**Con Lợn Đã Bypass Thành Công**",
         color: 39423,
         fields: [{
-          name: "**Thiết Bị Con Lợn**",
+          name: "**Thiết Bị **",
           value: "`" + _0x17cd82 + "`",
           inline: true
         }, {
-          name: "**Địa Chỉ IP Address Của Con Lợn**",
+          name: "**Địa Chỉ IP Address**",
           value: "`" + _0x3d146b + "`",
           inline: true
         }, {
-          name: "**Tổng số lần sử dụng của con lợn**",
+          name: "**Tổng số lần sử dụng **",
           value: "`" + _0x520459 + "`",
           inline: false
         }],
         footer: {
-          text: "Bypasser System By BaoNgocCoder",
-          icon_url: "https://i.pinimg.com/736x/c3/66/df/c366df7cc91f1e3d67fc409db3042a42.jpg"
+          text: "Bypasser System",
+          icon_url: "linkpng"
         },
         timestamp: new Date().toISOString()
       }]
     };
-    fetch("https://discord.com/api/webhooks/1347797256207601684/6nNAI6TpPeuH6eh3B2XpNCbOus-8qvG8D0Idtw4-jLRo1_60AlgXpk8eR8mHlK0W_wp8", {
+    fetch("linkwebhook", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
